@@ -1,6 +1,6 @@
 window.addEventListener("load", ()=> {
     graph1()
-})
+});
 let graph1=()=> {
     const arr1 = [
         10,
@@ -23,6 +23,10 @@ let graph1=()=> {
     graph1.style.height = random1+"%";
     graph2.style.height = random2+"%";
     graph3.style.height = random3+"%";
+    const g_height =[random1, random2, random3];
+    let nums = Math.max(...g_height);
+    let sca = document.querySelector(".sca");
+    sca.style.height = `calc(${nums}% - 20px)`;
 }
 let delay = "10000"
 setInterval(function() {
