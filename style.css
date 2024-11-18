@@ -1,0 +1,121 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body
+{
+    background: #000;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+.navbar
+{
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    /* background: gray; */
+    height: 50px;
+    align-items: center;
+    background: linear-gradient(252deg, #313131b8, transparent);
+    font-size: 25px;
+}
+.logo
+{
+    font-size: 30px;
+    font-weight: 900;
+}
+.heading
+{
+    color: #fff;
+}
+.graphbase
+{
+    content: '';
+    position: relative;
+    background: linear-gradient(113deg, #313131b8, transparent);
+    height: 400px;
+    width: 500px;
+    border-radius: 5px;
+    border: 2px solid #505050;
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    align-items: end;
+    padding: 10px;
+}
+.graphbase::before
+{
+    content: '';
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 5px;
+    width: 5px;
+    background: #00ff3c;
+    /* border-radius: 50%; */
+    box-shadow: 0 0 5px #00ff3c, 0 0 10px #00ff3c, 0 0 15px #00ff3c;
+    animation: colorc 1s linear infinite;
+}
+@keyframes colorc
+{
+    50%
+    {
+        background: #ff0000;
+        box-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000;
+        border-radius: 5px;
+    }
+}
+.graph
+{
+    content: '';
+    /* height: 100px; */
+    width: 61px;
+    background: gray;
+    transition: 1s ease-in-out;
+    position: relative;
+    border-radius: 3px;
+    box-shadow:  0 0 5px #00000047;
+}
+.graph b
+{
+    position: absolute;
+    top: -30px;
+    left: -40px;
+    color: #fff;
+    /* border: 3px solid #303030; */
+    padding: 2px;
+    border-radius: 3px;
+}
+.g1
+{
+    background: antiquewhite;
+    height: 1%;
+}
+.g2
+{
+    background: olive;
+    height: 1%;
+}
+.g3
+{
+    background: azure;
+    height: 1%;
+}
+@media only screen and (max-width: 700px) {
+    .graphbase
+    {
+        height: 200px;
+        width: 257px;
+    }
+    .graph
+    {
+        width: 40px;
+    }
+}
