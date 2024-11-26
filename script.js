@@ -68,11 +68,39 @@ let graph1 = () => {
   // let sca = document.querySelector(".sca");
   // sca.style.height = `calc(${nums}% - 20px)`;
 };
+
+let network=()=> {
+  const arr1 = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+  let random1 = arr1[Math.floor(Math.random() * arr1.length)];
+  let random2 = arr1[Math.floor(Math.random() * arr1.length)];
+  let random3 = arr1[Math.floor(Math.random() * arr1.length)];
+  let random4 = arr1[Math.floor(Math.random() * arr1.length)];
+  let random5 = arr1[Math.floor(Math.random() * arr1.length)];
+
+  let net1 = document.querySelector(".net1");
+  let net2 = document.querySelector(".net2");
+  let net3 = document.querySelector(".net3");
+  let net4 = document.querySelector(".net4");
+  let net5 = document.querySelector(".net5");
+
+  net1.style.height = random1 + "%";
+  net2.style.height = random2 + "%";
+  net3.style.height = random3 + "%";
+  net4.style.height = random4 + "%";
+  net5.style.height = random5 + "%";
+}
+
 let delay = "10000";
+let networkdelay = "100";
 setInterval(function () {
   graph1();
-  generateOTP();
+  network();
 }, delay);
+
+setInterval(function () {
+  network();
+  generateOTP();
+}, networkdelay);
 
 // gernate data number
 
@@ -86,7 +114,7 @@ function generateOTP() {
   for (let i = 0; i < 9; i++) {
     OTP += digits[Math.floor(Math.random() * len)];
   }
-  let datano = document.querySelector(".data-no");
+  let datano = document.querySelector(".data-num");
   datano.innerText = OTP;
   return OTP;
 }
