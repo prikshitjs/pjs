@@ -130,6 +130,8 @@ body
     padding: 2px;
     border-radius: 3px;
     font-size: 13px;
+    z-index: 100;
+    text-shadow: 0 0 5px #000;
 }
 .g1
 {
@@ -146,10 +148,13 @@ body
     background: azure;
     height: 1%;
 }
-.data-no
+.data-num
 {
     color: #fff;
-    font-size: 60px;
+    font-size: 8px;
+    position: absolute;
+    bottom: -15px;
+    left: 1px;
 }
 @media only screen and (max-width: 965px) {
     .data-section
@@ -188,4 +193,46 @@ body
         font-size: 12px;
         gap: 6px;
     }
+    .network_graph
+    {
+        top: 20px;
+    }
+}
+.network_graph
+{
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    height: 50px;
+    width: 30px;
+    background: transparent;
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    align-items: end;
+    border-radius: 2px;
+}
+.net
+{
+    background: #fff;
+    height: 100%;
+    width: 2px;
+    transition: 100ms;
+    position: relative;
+}
+.net:nth-child(3)
+{
+    height: 10px;
+    background: lime;
+}
+.net:nth-child(5)
+{
+    height: 30px;
+    background: lime;
+}
+.net:nth-child(1)
+{
+    height: 20px;
+    background: lime;
 }
